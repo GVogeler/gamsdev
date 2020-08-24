@@ -1,0 +1,877 @@
+﻿/*Project: GAMS Hearthtax (htx)
+Author: Jakob Sonnberger
+Company: ZIM-ACDH (Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities)*/
+
+@import url(/fonts/OpenSans/OpenSans.css);
+@import url(/fonts/DroidSerif/DroidSerif.css);
+
+/*
+###### Typography
+*/
+html {
+    background-color: #475862;
+}
+
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #e8e8e8;
+    color: #474747;
+}
+/*farben im main bereich sollen fÃ¼r alle projekte gleichbleiben wg. kontrast und einheitlichkeit*/
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 180%;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 130%;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-bottom: 0.8em;
+    margin-top: 0.4em;
+}
+
+h3 {
+    color: #00a06e; /*projektfarbe!*/
+    font-size: 125%;
+    line-height: 1.8em;
+}
+h3.objekt {
+    margin-top: 5px;
+}
+
+h4 {
+    font-size: 115%;
+    color: #333333;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+h5 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #333333;
+
+}
+
+h6 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 100%;
+    line-height: 1.5;
+
+}
+
+blockquote,
+cite,
+q {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #00a06e; /*projektfarbe!*/
+}
+
+a:hover,
+a:focus {
+    background-color: transparent;
+    color: inherit;
+}
+
+.color {
+    color: #00a06e; /*projektfarbe!*/
+}
+
+/*
+###### Header
+*/
+
+header h2 {
+    margin-top: 10px !important;
+}
+
+@media (max-width : 768px) {
+    header h1 {
+        font-size: 170%;
+    }
+    header h2 {
+        font-size: 120%;
+    }
+    .logoUni {
+        height: 45px;
+    }
+
+}
+@media (max-width : 568px) {
+    header h1 {
+        font-size: 130%;
+    }
+    header h2 {
+        font-size: 100%;
+    }
+}
+
+div.unilogo {
+    margin-top: 40px;
+    padding: 0;
+    float: right;
+}
+
+div.unilogo a {
+    text-decoration: none;
+    background: none;
+}
+
+img.logoUni {
+    max-height: 62px;
+}
+
+header {
+    background-color: #00a06e; /*projektfarbe!*/
+    overflow: hidden;
+    height: 125px;
+}
+
+header h1,
+header h2 {
+    color: #ffffff;
+}
+header h1 {
+    margin-top: 37px;
+}
+
+/*
+###### Navigation
+siehe navbar.css
+*/
+
+
+/*
+###### Main
+
+*/
+main a:hover,
+main a:focus {
+    background-color: transparent;
+    color: #00a06e; /*projektfarbe!*/
+}
+
+main p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+
+}
+
+/*
+###### Footer
+
+*/
+
+footer {
+    background-color: #475862;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+footer h6 {
+    color: inherit;
+    background-color: inherit;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 1em;
+}
+
+footer .row {
+    padding: 10px;
+}
+
+footer a {
+    color: inherit;
+}
+
+
+img.footer_icons {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.icons a:hover,
+.icons a:focus {
+    text-decoration: none;
+}
+/*
+###### Boxen
+*/
+
+.card {
+    box-shadow: none;
+    border: none;
+    /*	border: 1px solid transparent;*/
+    border-radius: 0;
+    /* padding-right:20px;
+    padding-left:20px;*/
+    /*    margin-bottom:30px;*/
+    margin-top: 30px;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+/*
+###### Bilder
+*/
+
+.thumbnail {
+    border-radius: 0;
+}
+
+
+/*
+###### Suche und Kontextliste
+*/
+
+
+.arrow-down-context {
+    font-size: 10px;
+    padding-right: 5px;
+}
+.context-item-number {
+    float: right;
+    color: #00a06e; /*projektfarbe*/
+}
+
+p.results {
+    float: right;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+li.results {
+    position: relative;
+    overflow: hidden;
+    border-bottom: dotted 1px;
+    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
+}
+
+li.results:last-child {
+    border-bottom: none;
+}
+
+img.results {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+span.results {
+    vertical-align: top;
+    padding-right: 10px;
+}
+span.permalink {
+    font-size: 12px;
+}
+span.icon-span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+}
+.form-control,
+.input-group-addon,
+.btn {
+    border-radius: 0;
+}
+
+#search a,
+#search a:hover,
+#search a:focus,
+#results a,
+#results a:hover,
+#results a:focus {
+    color: #333333;
+    text-decoration: none;
+}
+
+
+#search p,
+#results p {
+    margin-bottom: 5px;
+}
+
+#search-navi a,
+#search-navi a:hover,
+#search-navi a:focus {
+    color: #00a06e; /*projektfarbe!*/
+}
+
+
+.result {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*Accordion*/
+
+.accordion {
+    padding: 0;
+}
+.sublinks {
+    max-height: 270px;
+    overflow-y: scroll;
+}
+.accordion .list-group-item {
+    border-radius: 0;
+}
+
+/**Styling für die Elementliste in der Sidebar des ODD Interfaces**/
+#sidebar .panel {
+
+    padding: 20px;
+
+}
+#moduleList a {
+    font-size: 20px;
+    font-variant: small-caps;
+
+}
+#elementList #descElementList strong {
+    font-variant: small-caps;
+    font-size: 20px;
+}
+/** END ODD Sidebar **/
+
+
+/*
+###### HearthTax
+*/
+
+/*
+###### HearthTax CONTEXT
+*/
+
+span.icon-span img {
+    margin-right: 10px;
+}
+
+img.logoUni
+{
+    margin-left: 10px
+}
+
+q {
+    font-style: italic;
+}
+
+div.contact p {
+    line-height: 1.25;
+    font-size: 85%;
+}
+
+div.contact a {
+    text-decoration: underline;
+}
+
+/*
+###### HearthTax HOME
+*/
+
+article.teaser-img div.card-body {
+    padding: 0;
+    max-height: 400px;
+}
+
+article.teaser-text div.card-body {
+    min-height: 400px;
+}
+
+article.teaser-text h3 {
+    margin-top: 0;
+}
+
+article.teaser-text p {
+    font-size: 90%;
+}
+
+div#home_carousel img {
+    max-height: 400px;
+}
+
+div.carousel-caption {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 10px;
+    color: black;
+}
+
+article.teaser-text p {
+    text-align: justify;
+}
+
+/*
+###### HearthTax ABOUT
+*/
+
+article.about_site p {
+    text-align: justify;
+}
+
+article.about_site a:hover {
+    text-decoration: underline;
+
+}
+
+article.about_links div.card-body {
+    background-color: #e8e8e8;
+    padding: 0;
+    margin: 0;
+}
+
+article.about_links div.list-group {
+    margin-top: 10px;
+}
+
+article.about_links div.list-group img {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+article.about_links div.list-group a {
+    font-size: 80%;
+}
+
+/*
+###### HearthTax TRANSCRIPTS
+*/
+
+article#transcript :target {
+    color: #00a06e;
+}
+
+/*place-div*/
+article#transcript div.place
+{
+    margin-bottom: 50px
+}
+
+/*source-div, source p*/
+article#transcript div.source,
+article#transcript p.source
+{
+    background-color: #f5f5e4;
+}
+
+/*headers*/
+article#transcript h1,
+article#transcript h2,
+article#transcript h3,
+article#transcript h4,
+article#transcript h5,
+article#transcript h6 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: black;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+article#transcript h1 {
+    font-size: 200%;
+}
+
+article#transcript h2 {
+    font-size: 180%;
+}
+
+article#transcript h3 {
+    font-size: 160%;
+}
+
+article#transcript h4 {
+    font-size: 140%;
+}
+
+article#transcript h5 {
+    font-size: 120%;
+}
+
+article#transcript h6 {
+    font-size: 110%;
+}
+
+/*p-height*/
+article#transcript p {
+    min-height: 24px
+}
+
+/*table headings*/
+p.h_Hearths-Column-Heading {
+    text-align: right;
+}
+
+/*hearths*/
+p span.hearths {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+}
+
+/*sum entry*/
+p.h_total measure {
+    text-align: right
+}
+
+/*transcript checkboxes*/
+article#transcript input.form-check-input {
+    right: 10px;
+    position: absolute;
+}
+
+/*entries hover*/
+article#transcript p:hover {
+    background-color: #F8F8FF;
+}
+
+/*editorial adaptions*/
+article#transcript .edit,
+span.oi-comment-square {
+    color: #999999
+}
+
+article#transcript .edit:hover,
+span.oi-comment-square:hover {
+    color: #000000;
+}
+
+/*deletion strike-through*/
+article#transcript span.edit.del {
+    text-decoration: line-through;
+}
+
+article#transcript span.edit.del:hover {
+    text-decoration: none;
+}
+
+/*Comment Square*/
+article#transcript span.oi-comment-square {
+    vertical-align: 5px;
+    font-size: 70%;
+}
+
+/*Transcript Tables*/
+/*Sum Tables*/
+
+article#transcript table {
+    margin-bottom: 50px;
+}
+
+article#transcript tr.total {
+    border-top: solid 1px;
+}
+
+article#transcript td {
+    width: 15%
+}
+
+article#transcript td:first-child {
+    width: 40%
+}
+
+/*area_navigator*/
+
+article.area_navigator {
+    height: calc(100vh - 65px);
+    overflow-y: auto;
+    margin-top: 30px;
+    top: 60px;
+    padding-right: 0;
+    z-index: 0;
+}
+
+article.area_navigator .card {
+    margin-top: 0;
+}
+
+article.area_navigator .card-body {
+    padding: 5px;
+}
+
+article.area_navigator a {
+    font-size: 60%;
+    color: #000000;
+}
+
+/*Infobox*/
+
+button#infobox_button {
+    background-color: #00a06e;
+    border-radius: 50%;
+    margin: 5px 5px 0 0;
+    float: right;
+    height: 40px;
+    width: 40px;
+}
+
+button#infobox_button:hover {
+    background-color: #999999;
+}
+
+span.oi-info {
+    color: #ffffff;
+}
+
+.info_label {
+    font-weight: bold;
+}
+
+a.infobox_download img {
+    margin: 10px 20px;
+}
+
+/*
+###### HearthTax Advanced Search
+*/
+
+div.alert {
+    background-color: #00a06e;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+.oi-x {
+    font-size: 70%;
+}
+
+/*
+###### HearthTax BYBOOK
+*/
+
+/*headers*/
+article#bybook h1,
+article#bybook h2,
+article#bybook h3,
+article#bybook h4,
+article#bybook h5,
+article#bybook h6 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: black;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+article#bybook h1 {
+    font-size: 200%;
+}
+
+article#bybook h2 {
+    font-size: 140%;
+}
+
+article#bybook p.h_Hearths-Column-Heading {
+    text-align: right;
+}
+article#bybook p:hover {
+    background-color: #F8F8FF;
+}
+
+
+/*
+###### HearthTax SEARCH RESULTS
+*/
+
+article#search_result table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+article#search_result table thead tr {
+    border-color: white;
+}
+
+article#search_result table thead:first-of-type {
+    background-color: #F8F8FF;
+}
+
+article#search_result h3 {
+    font-size: 160%
+}
+
+article#search_result h4 {
+    font-size: 140%
+}
+/*Table of contents*/
+div.toc {
+    /*position:fixed;*/
+}
+/*
+###### HearthTax DATABASKET
+*/
+
+span#daba_length {
+    margin-left: 5px;
+    font-size: 75%;
+}
+
+div#databasket_tools {
+    float: right;
+    margin-bottom: 10px;
+}
+
+a#clear_databasket {
+    font-size: 24px;
+    vertical-align: -5px;
+    color: #800000;
+    margin-left: 20px;
+}
+
+/*Modal*/
+div#clear_databasket_modal button {
+    border-radius: 5px;
+}
+div.modal {
+    z-index: 11000
+}
+article#databasket table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+article#databasket table th,
+article#databasket table td {
+    padding: 10px;
+}
+
+article#databasket table thead {
+    background-color: #F8F8FF;
+}
+
+article#databasket table th {
+    border-right: solid 1px #ffffff;
+}
+
+article#databasket table span.oi-trash,
+article#databasket table span.oi-elevator,
+article#databasket table span.oi-caret-top,
+article#databasket table span.oi-caret-bottom {
+    float: right;
+    color: #999999;
+}
+
+article#databasket table span.oi-trash:hover,
+article#databasket table span.oi-elevator:hover,
+article#databasket table span.oi-caret-top:hover,
+article#databasket table span.oi-caret-bottom:hover {
+    color: #000000;
+}
+
+/*databasket sum*/
+article#databasket table tfoot {
+    border-top: solid;
+    border-bottom: double;
+}
+
+/*bybook checkboxes*/
+input.form-check-input {
+    margin-left: 10px;
+    position: relative;
+    float: right;
+}
+
+/*GENERAL*/
+div.alert a {
+    color: white;
+    text-decoration: underline;
+}
+
+p.green {
+    background-color: #00a06e;
+    padding: 10px;
+    color: white;
+}
+main.loading > * {
+    opacity: 0.25;
+}
+main.loading {
+    background: transparent url('../img/loading.gif') no-repeat 50% 50% fixed;
+}
+
+/*MAP*/
+
+/* legend */
+article#htx_map input[type = "text"],
+article#htx_map div.input-group-text {
+    font-weight: bold;
+}
+
+/*
+COLORCHART MIKE:
+#4040ff -> blue, cmyk(75%, 75%, 0%, 0%)
+#ff0000 -> red, cmyk(0%, 100%, 100%, 0%)
+#ff8099 -> dark orange, cmyk(0%, 50%, 40%, 0%)
+#ffb380 -> mid-orange, cmyk(0%, 30%, 50%, 0%)
+#ffd9bf -> light-orange, cmyk(0%, 15%, 25%, 0%)
+#ffffbf->  yellow, cmyk(0%, 0%, 25%, 0%)
+*/
+
+article#htx_map div#map_legend div#xxs * {
+    background-color: #ffffbf;
+}
+article#htx_map div#map_legend div#xs * {
+    background-color: #ffd9bf;
+}
+article#htx_map div#map_legend div#s * {
+    background-color: #ffb380;
+}
+article#htx_map div#map_legend div#m * {
+    background-color: #ff8099;
+}
+article#htx_map div#map_legend div#l * {
+    background-color: #ff0000;
+}
+article#htx_map div#map_legend div#xl * {
+    background-color: #4040ff;
+    color: white;
+}
+article#htx_map div#map_legend .btn {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+article#htx_map div#map_legend .btn:hover {
+    font-weight: bold;
+    border: solid 1px;
+}
+
+/* map */
+article#htx_map div#map {
+    height: 500px;
+}
+
+/* alert (info) box */
+article#htx_map div#map_alert {
+    margin: 15px;
+    text-align: justify;
+}
+
+/* result table */
+article#htx_map div#map_table td,
+article#htx_map div#map_table th {
+    padding: 5px !important;
+    font-size: 50%;
+}
