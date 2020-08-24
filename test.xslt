@@ -1,7 +1,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     >
-    <xsl:output method="html" encoding="UTF-8"/>
+    <xsl:output method="html" encoding="UTF-8" indent="yes"/>
     <xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/gamsdev/master/<xsl:text></xsl:text></xsl:variable>
     <!-- gesamtes css ist in dieser Datei zusammengefasst mit Ausnahme der Navigation -->
 	<xsl:variable name="projectCss">
