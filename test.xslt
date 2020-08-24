@@ -9,7 +9,7 @@
 	</xsl:variable>
 	<!--css für die navigation-->
 	<xsl:variable name="projectNav">
-		<xsl:value-of select="concat($gamsdev, '/css/htx-navbar.css')"/>
+		<xsl:value-of select="concat($gamsdev, 'css/htx-navbar.css')"/>
 	</xsl:variable>
     <xsl:template match="/">
         <html>
