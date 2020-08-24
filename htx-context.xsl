@@ -13,8 +13,8 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/" exclude-result-prefixes="#all">
     <!--<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="no"/>-->
     <xsl:include href="htx-static.xsl"/>
-    <xsl:variable name="taxations-total"
-        select="doc('htts://gams.uni-graz.at/archive/objects/query:htx.taxations-total/methods/sdef:Query/getXML')//s:taxations"/>
+    <xsl:variable name="taxations-total">1234567890</xsl:variable>
+        <!-- select="doc('htts://gams.uni-graz.at/archive/objects/query:htx.taxations-total/methods/sdef:Query/getXML')//s:taxations"/> -->
     <xsl:template name="content">
         <section class="row">
             <article class="col-md-12 records">
