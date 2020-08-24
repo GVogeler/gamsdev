@@ -49,8 +49,8 @@
 	<xsl:variable name="gamsdev">/gamsdev/sonnberger</xsl:variable>-->
 	
 	<!-- #GAMS -->
-	<xsl:variable name="server">http://gams.uni-graz.at</xsl:variable>
-	<xsl:variable name="gamsdev"/>
+	<xsl:variable name="server">https://glossa.uni-graz.at</xsl:variable>
+	<xsl:variable name="gamsdev">https://georg-vogeler.eu/gamsdev</xsl:variable>
 	
 	<xsl:variable name="projectTitle">
 		<xsl:text>Hearth Tax Digital</xsl:text>
@@ -295,7 +295,7 @@
 									<div class="card">
 										<div class="card-body">
 											<xsl:apply-templates
-												select="document('/archive/objects/context:htx/datastreams/HOME/content')//t:TEI"
+												select="document(concat($server,'/archive/objects/context:htx/datastreams/HOME/content'))//t:TEI"
 											/>
 										</div>
 									</div>
@@ -309,7 +309,7 @@
 									<div class="card">
 										<div class="card-body">
 											<xsl:apply-templates
-												select="document('/archive/objects/context:htx/datastreams/ABOUT/content')//t:TEI"
+												select="document(concat($server,'/archive/objects/context:htx/datastreams/ABOUT/content'))//t:TEI"
 											/>
 										</div>
 									</div>
@@ -563,7 +563,7 @@
 									<div class="card">
 										<div class="card-body">
 											<xsl:variable name="imprint"
-												select="document('/archive/objects/context:htx/datastreams/IMPRINT/content')/t:TEI"/>
+												select="document(concat($server,'/archive/objects/context:htx/datastreams/IMPRINT/content'))/t:TEI"/>
 											<xsl:apply-templates select="$imprint//t:text"/>
 											<xsl:call-template name="publication">
 												<xsl:with-param name="imprint" select="$imprint"/>
