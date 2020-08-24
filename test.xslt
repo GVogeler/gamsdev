@@ -2,12 +2,22 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     >
     <xsl:output method="html" encoding="UTF-8"/>
-    <xsl:include href="htx-static.xsl"/>
+    <xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/gamsdev/master/<xsl:text></xsl:text></xsl:variable>
+    <!-- gesamtes css ist in dieser Datei zusammengefasst mit Ausnahme der Navigation -->
+	<xsl:variable name="projectCss">
+		<xsl:value-of select="concat($gamsdev, 'css/htx.css')"/>
+	</xsl:variable>
+	<!--css für die navigation-->
+	<xsl:variable name="projectNav">
+		<xsl:value-of select="concat($gamsdev, '/css/htx-navbar.css')"/>
+	</xsl:variable>
     <xsl:template match="/">
         <html>
             <head>
                 <meta encoding="utf-8"/>
                 <title><xsl:apply-templates select="/TEI/teiHeader/fileDesc/titleStmt/title"/></title>
+                <link href="{$projectCss}" rel="stylesheet" type="text/css"/>
+				<link href="{$projectNav}" rel="stylesheet" type="text/css"/>
             </head>
             <body>
                 <nav><ul><li>Menu 1</li><li>menu 2</li></ul></nav>
