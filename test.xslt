@@ -2,7 +2,7 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     >
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
-    <xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/gamsdev/<xsl:text></xsl:text></xsl:variable>
+    <xsl:variable name="gamsdev">https://raw.githubusercontent.com/GVogeler/gamsdev/master/<xsl:text></xsl:text></xsl:variable>
     <!-- gesamtes css ist in dieser Datei zusammengefasst mit Ausnahme der Navigation -->
 	<xsl:variable name="projectCss">
 		<xsl:value-of select="concat($gamsdev, '/htx/css/htx.css')"/>
